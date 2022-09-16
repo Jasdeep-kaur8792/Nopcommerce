@@ -11,7 +11,7 @@ public class AddItemsOfComputer extends Baseclass
 
     public void verifyComputerItems() throws InterruptedException, IOException
     {
-
+        pageFactoryNew.getAddComputerItems().verifyComputer();
     }
 
 }

@@ -25,17 +25,17 @@ public class Baseclass {
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            ChromeOptions chromeOptions = new ChromeOptions();
+           // ChromeOptions chromeOptions = new ChromeOptions();
             driver.manage().window().maximize();
-           WebDriver driver = new RemoteWebDriver(new URL(" http://10.20.20.80:4444/wd/hub"), chromeOptions);
-            driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
+          // WebDriver driver = new RemoteWebDriver(new URL(" http://10.20.20.80:4444/wd/hub"), chromeOptions);
+            driver.get("https://demo.nopcommerce.com/");
             pageFactoryNew = new PageFactoryNew(driver);
 
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
-            driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
+            driver.get("https://demo.nopcommerce.com/");
             pageFactoryNew = new PageFactoryNew(driver);
         }
     }
